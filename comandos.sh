@@ -1,5 +1,5 @@
 
-npm install aws-sdk           # 
+npm install aws-sdk           # es la biblioteca oficial de AWS para interactuar con sus servicios.
 
 
 Comandos Adicionales de Terraform

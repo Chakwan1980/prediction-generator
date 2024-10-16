@@ -1,1 +1,2 @@
 # prediction-generator
+# AWS.DynamoDB.DocumentClient() se utiliza para interactuar con Amazon DynamoDB. Este cliente permite trabajar con documentos de una manera más intuitiva, usando objetos JavaScript en lugar de trabajar con la estructura de datos de bajo nivel de DynamoDB.

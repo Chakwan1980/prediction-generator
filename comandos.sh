@@ -1,5 +1,6 @@
 
 npm install aws-sdk           # es la biblioteca oficial de AWS para interactuar con sus servicios.
+terraform state list 
 
 
 Comandos Adicionales de Terraform

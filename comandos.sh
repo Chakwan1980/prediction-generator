@@ -5,6 +5,13 @@ zip -r predictor-generator-lambda.zip .   ## importante para poder  utilizar lam
 
 terraform output     # lista los outputs creados
 
+:::::::::::  Power Shell
+
+Compress-Archive -Path prediction-functions/post.js, node_modules/* -DestinationPath terraform/post-prediction-lambda.zip
+Compress-Archive -Path prediction-functions/get.js, node_modules/* -DestinationPath terraform/get-predictions-lambda.zip
+Compress-Archive -Path prediction-functions/delete.js, node_modules/* -DestinationPath terraform/delete-prediction-lambda.zip
+
+::::::::::
 
 Comandos Adicionales de Terraform
 1. Gestión del Estado

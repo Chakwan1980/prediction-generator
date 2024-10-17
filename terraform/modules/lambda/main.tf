@@ -1,15 +1,15 @@
-resource "aws_lambda_function" "my_lambda_function" {
-  function_name    = var.function_name
-  role             = var.lambda_role_arn
-  handler          = var.handler
-  runtime          = var.runtime
+resource "aws_lambda_function" "lambda_function" {
+    function_name = var.function_name
+    role = var.lambda_role_arn
+    handler = var.handler
+    runtime = var.runtime
 
-  filename         = var.lambda_zip_path
-  source_code_hash = filebase64sha256(var.lambda_zip_path)
+    filename = var.lambda_zip_path
+    source_code_hash = filebase64sha256(var.lambda_zip_path)
 
-  environment {
+    environment {
     variables = merge(var.lambda_environment_vars, {
       DYNAMODB_TABLE = var.dynamodb_table_name
-    }) 
-  }  // Cierre del bloque environment
-}  // Cierre del bloque resource
+    })
+  }
+}

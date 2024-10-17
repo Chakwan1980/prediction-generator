@@ -1,6 +1,9 @@
 
 npm install aws-sdk           # es la biblioteca oficial de AWS para interactuar con sus servicios.
 terraform state list 
+zip -r predictor-generator-lambda.zip .   ## importante para poder  utilizar lambda  solo cambiar el nombre del archivo .zip
+
+terraform output     # lista los outputs creados
 
 
 Comandos Adicionales de Terraform
@@ -96,3 +99,18 @@ terraform show
 terraform destroy
 
 terraform state show module.prediction_dynamodb_table.aws_dynamodb_table.dynamodb_table
+
+
+
+
+* async function obtenerDatos() {
+    try {
+        const respuesta = await fetch('https://api.example.com/datos');
+        const datos = await respuesta.json();
+        console.log(datos); // Muestra los datos obtenidos
+    } catch (error) {
+        console.error('Ocurrió un error al obtener los datos:', error);
+    }
+
+
+obtenerDatos();
